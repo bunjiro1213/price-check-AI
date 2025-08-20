@@ -1,6 +1,8 @@
 import Constants from 'expo-constants';
 import { Text, StyleSheet, View } from 'react-native';
+import { Route, Routes, Navigate } from 'react-router-native';
 import AppBar from './AppBar';
+import RegisterPage from './Register';
 
 const styles = StyleSheet.create({
   container: {
@@ -13,7 +15,11 @@ const styles = StyleSheet.create({
 const Main = () => {
   return (
     <View style={styles.container}>
-      <AppBar/>
+      <Routes>
+      <Route path="/" element={<AppBar />} />
+      <Route path="/register" element={<RegisterPage />} />
+      </Routes>
+
     </View>
   );
 };

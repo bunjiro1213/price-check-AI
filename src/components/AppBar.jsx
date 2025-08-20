@@ -1,4 +1,6 @@
 import { View, Image, StyleSheet, Text, Pressable } from 'react-native';
+import { useNavigate } from 'react-router-native';
+
 
 const styles = StyleSheet.create({
   container: {
@@ -57,14 +59,15 @@ const styles = StyleSheet.create({
 });
 
 const AppBar = () => {
+  const navigate = useNavigate();
   return (
     <View style={styles.container}>
       <Image style={styles.image} source={require('../images/logo(2).png')} />
       <Text style={styles.text}>Welcome</Text>
       <Text style={styles.text2}>Start or sign in to your account</Text>
       <View style={styles.buttonContainer}>
-      <Pressable onPress={() => {}} style={styles.button}>
-         <Text style={styles.buttonText}>Start</Text>
+      <Pressable onPress={() => navigate("/register")} style={styles.button}>
+          <Text style={styles.buttonText}>Start</Text>
       </Pressable>
       <Text style={styles.text2}> Already have an account? </Text>
       <Pressable onPress={() => {}}>
