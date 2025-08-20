@@ -1,16 +1,17 @@
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Image, StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: 'red',
-    height: 50,
+    backgroundColor: 'darkgray',
+  },
+  image: {
   },
 });
 
 const AppBar = () => {
   return (
     <View style={styles.container}>
-      <Text>Price Check AI</Text>
+      <Image style={styles.image} source={require('../images/logo(2).png')} />
     </View>
   );
 };
